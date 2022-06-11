@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="json-20220320">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../project_publisher/lib/json-20220320.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../project_publisher/lib/dotenv-java-2.2.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
