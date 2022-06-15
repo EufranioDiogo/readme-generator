@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="825.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.readme.readmegenerator1.windows.createNewReadmeWindow.CreateNewReadmeController">
+   <children>
+      <AnchorPane prefHeight="605.0" prefWidth="825.0" style="-fx-background-color: white;">
+         <children>
+            <Button id="goToMainWindowBtn" fx:id="goToMainWindowBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMainWindow" text="Voltar" />
+            <ScrollPane id="mainScrollPane" fx:id="mainScrollPane" layoutX="-1.0" layoutY="93.0" prefHeight="442.0" prefWidth="825.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="86.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="765.0" prefWidth="806.0" style="-fx-background-color: white; -fx-border-color: white;">
+                     <children>
+                        <Label layoutX="21.0" layoutY="14.0" text="Username*:" />
+                        <TextField fx:id="usernameParamTextField" layoutX="21.0" layoutY="42.0" />
+                        <Label layoutX="21.0" layoutY="82.0" text="Nome Repositorio*:" />
+                        <TextField fx:id="repoNameParamTextField" layoutX="21.0" layoutY="110.0" styleClass="text-field" />
+                        <Label layoutX="20.0" layoutY="163.0" text="URL do Site:" />
+                        <TextField fx:id="domainNameParamTextField" layoutX="20.0" layoutY="191.0" styleClass="text-field" />
+                        <Label layoutX="20.0" layoutY="555.0" text="Tecnologias usadas:" />
+                        <TextField fx:id="builtWithNameParamTextField" layoutX="20.0" layoutY="581.0" styleClass="text-field" />
+                        <Label layoutX="20.0" layoutY="615.0" text="Separar por virgula">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="20.0" layoutY="240.0" text="Sobre o projecto:" />
+                        <TextArea fx:id="aboutProjectParamTextField" layoutX="20.0" layoutY="269.0" prefHeight="261.0" prefWidth="548.0" styleClass="text-area" />
+                        <Label layoutX="21.0" layoutY="649.0" text="Licensa:" />
+                        <ComboBox id="licenseParamComboBox" fx:id="licenseParamComboBox" layoutX="19.0" layoutY="676.0" prefHeight="24.0" prefWidth="174.0" styleClass="combo-box" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <Button id="createNewReadmeButton" fx:id="createNewReadmeButton" layoutX="15.0" layoutY="555.0" mnemonicParsing="false" onMouseClicked="#createNewReadme" prefHeight="33.0" prefWidth="125.0" text="Criar README" textFill="WHITE">
+               <font>
+                  <Font name="Lato Regular" size="14.0" />
+               </font>
+            </Button>
+            <Label id="creationMessage" fx:id="creationMessage" layoutX="159.0" layoutY="560.0" text="..." />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

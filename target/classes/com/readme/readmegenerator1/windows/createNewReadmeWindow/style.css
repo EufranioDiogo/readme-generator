@@ -1,0 +1,47 @@
+#mainScrollPane {
+    -fx-border-color: white;
+}
+.text-field {
+    -fx-text-fill: #222;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-min-width: 300px;
+    -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
+}
+
+.text-area {
+    -fx-min-width: 600px;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-text-fill: #222;
+    -fx-padding: 5px 10px;
+    -fx-border-color: #222;
+    -fx-end-margin: 40px;
+}
+.text-area, .text-field, .combo-box, #goToMainWindowBtn {
+    -fx-border-radius: 5px;
+}
+
+#createNewReadmeButton {
+    -fx-background-color: #0085BE;
+}
+
+#createNewReadmeButton:hover {
+    -fx-background-color: #00B2FF;
+}
+
+#goToMainWindowBtn {
+	-fx-background-color: #2225;
+	-fx-text-fill: #fff;
+	-fx-padding: 10px 15px;
+}
+
+#goToMainWindowBtn:hover {
+	-fx-background-color: #222;
+}
+
+.button {
+	-fx-cursor: pointer;
+}
