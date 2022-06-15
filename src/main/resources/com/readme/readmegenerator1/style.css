@@ -1,0 +1,16 @@
+#mainWindow {
+    -fx-background-color: white;
+}
+#mainMenu {
+    -fx-background-color: white;
+    -fx-text-fill: #222;
+}
+#centralPanel {
+    -fx-background-image: url("images/undraw_version_control_re_mg66.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-content-display: flex;
+    -fx-column-halignment: center;
+    -fx-row-valignment: center;
+}
