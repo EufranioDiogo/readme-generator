@@ -112,7 +112,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.readme.readmegenerator1/com.readme.readmegenerator1.HelloApplication
+                            <mainClass>com.readme.readmegenerator1/com.readme.readmegenerator1.MainApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
