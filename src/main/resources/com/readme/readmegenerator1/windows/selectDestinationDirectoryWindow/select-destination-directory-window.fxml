@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0"
+      prefWidth="701.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow.SelectDestinationDirectoryWindowController">
+    <children>
+        <AnchorPane prefHeight="528.0" prefWidth="701.0" style="-fx-background-color: white;">
+            <children>
+                <Label layoutX="20.0" layoutY="20.0" styleClass="screen-title"
+                       stylesheets="@../createNewReadmeWindow/style.css" text="3º Onde irá o seu README "/>
+                <TextField fx:id="directoryLocationTextField" id="directoryLocationTextField" disable="true"
+                           layoutX="20.0" layoutY="73.0" prefHeight="24.0" prefWidth="307.0"/>
+                <Button id="createNewReadmeButton" fx:id="createNewReadmeButton" onMouseClicked="#createReadme"
+                        layoutX="150.0" layoutY="121.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="125.0"
+                        styleClass="button" text="Concluir" textFill="WHITE">
+                    <font>
+                        <Font name="Lato Regular" size="14.0"/>
+                    </font>
+                </Button>
+                <Button id="goBack" fx:id="goBack" layoutX="20.0" layoutY="121.0"
+                        mnemonicParsing="false" prefHeight="36.0" prefWidth="118.0" styleClass="button" text="Voltar"/>
+                <ImageView id="openDirectoryButton" fitHeight="30.0" fitWidth="34.0" layoutX="334.0" layoutY="70.0"
+                           pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../images/arcticons_folder.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

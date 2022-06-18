@@ -10,14 +10,23 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="mainWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="602.0" prefWidth="825.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.readme.readmegenerator1.windows.createNewReadmeWindow.CreateNewReadmeController">
+<VBox fx:id="mainWindow"
+      maxHeight="-Infinity"
+      maxWidth="-Infinity"
+      minHeight="-Infinity"
+      minWidth="-Infinity"
+      prefHeight="735.0"
+      prefWidth="826.0"
+      stylesheets="@style.css"
+      xmlns="http://javafx.com/javafx/18"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.readme.readmegenerator1.windows.createNewReadmeWindow.CreateNewReadmeController">
    <children>
-      <AnchorPane prefHeight="605.0" prefWidth="825.0" style="-fx-background-color: white;">
+      <AnchorPane prefHeight="739.0" prefWidth="826.0" style="-fx-background-color: white;">
          <children>
-            <Button id="goToMainWindowBtn" fx:id="goToMainWindowBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#goToMainWindow" text="Voltar" />
-            <ScrollPane id="mainScrollPane" fx:id="mainScrollPane" layoutX="-1.0" layoutY="93.0" prefHeight="442.0" prefWidth="825.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="86.0">
+            <ScrollPane id="mainScrollPane" fx:id="mainScrollPane" layoutX="1.0" layoutY="121.0" prefHeight="556.0" prefWidth="825.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="78.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="765.0" prefWidth="806.0" style="-fx-background-color: white; -fx-border-color: white;">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="767.0" prefWidth="806.0" style="-fx-background-color: white; -fx-border-color: white;">
                      <children>
                         <Label layoutX="21.0" layoutY="14.0" text="Username*:" />
                         <TextField fx:id="usernameParamTextField" layoutX="21.0" layoutY="42.0" />
@@ -33,19 +42,20 @@
                            </font>
                         </Label>
                         <Label layoutX="20.0" layoutY="240.0" text="Sobre o projecto:" />
-                        <TextArea fx:id="aboutProjectParamTextField" layoutX="20.0" layoutY="269.0" prefHeight="261.0" prefWidth="548.0" styleClass="text-area" />
+                        <TextArea fx:id="aboutProjectParamTextField" layoutX="20.0" layoutY="269.0" prefHeight="261.0" prefWidth="759.0" styleClass="text-area" />
                         <Label layoutX="21.0" layoutY="649.0" text="Licensa:" />
                         <ComboBox id="licenseParamComboBox" fx:id="licenseParamComboBox" layoutX="19.0" layoutY="676.0" prefHeight="24.0" prefWidth="174.0" styleClass="combo-box" />
                      </children>
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <Button id="createNewReadmeButton" fx:id="createNewReadmeButton" layoutX="15.0" layoutY="555.0" mnemonicParsing="false" onMouseClicked="#createNewReadme" prefHeight="33.0" prefWidth="125.0" text="Criar README" textFill="WHITE">
+            <Button id="createNewReadmeButton" fx:id="createNewReadmeButton" layoutX="148.0" layoutY="679.0" mnemonicParsing="false" onMouseClicked="#createNewReadme" prefHeight="36.0" prefWidth="125.0" styleClass="button" text="Próximo" textFill="WHITE">
                <font>
                   <Font name="Lato Regular" size="14.0" />
                </font>
             </Button>
-            <Label id="creationMessage" fx:id="creationMessage" layoutX="159.0" layoutY="560.0" text="..." />
+            <Label layoutX="20.0" layoutY="38.0" styleClass="screen-title" stylesheets="@style.css" text="2º Dê o contéudo para o seu projecto" />
+            <Button id="goToMainWindowBtn" fx:id="goToMainWindowBtn" layoutX="20.0" layoutY="679.0" mnemonicParsing="false" onMouseClicked="#goToMainWindow" prefHeight="36.0" prefWidth="118.0" styleClass="button" text="Voltar" />
          </children>
       </AnchorPane>
    </children>

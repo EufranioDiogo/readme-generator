@@ -1,19 +1,20 @@
 package com.readme.readmegenerator1.windows.createNewReadmeWindow;
 
-import com.readme.logic.TemplateGenerator;
-import com.readme.logic.utils.FileType;
 import com.readme.readmegenerator1.MainApplication;
+import com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow.SelectDestinationDirectoryWindowApplication;
+import com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow.SelectDestinationDirectoryWindowController;
+import com.readme.readmegenerator1.windows.utils.CloseAndOpen;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
-import java.util.ResourceBundle;
 
 public class CreateNewReadmeController {
     @FXML
@@ -26,14 +27,11 @@ public class CreateNewReadmeController {
     public ComboBox licenseParamComboBox;
     public Button createNewReadmeButton;
     public VBox mainWindow;
-    public Label creationMessage;
 
     public void goToMainWindow() {
         try {
             new MainApplication().start(new Stage());
-            Stage stage = (Stage) mainWindow.getScene().getWindow();
-
-            stage.close();
+            CloseAndOpen.close(mainWindow);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -53,23 +51,28 @@ public class CreateNewReadmeController {
         //paramsAndValues.put("usage_examples_param", );
         //paramsAndValues.put("tasks_param", );
 
+        SelectDestinationDirectoryWindowController.readmeParamValueHashMap = paramsAndValues;
+
         cleanInputFields();
 
-        creationMessage.setVisible(true);
+
 
         try {
-            TemplateGenerator.generateFile(FileType.README, "README.md", paramsAndValues);
-
-            creationMessage
+            new SelectDestinationDirectoryWindowApplication().start(new Stage());
+            CloseAndOpen.close(mainWindow);
+            /*creationMessage
                     .setText(ResourceBundle.getBundle("labels", Locale.getDefault())
-                    .getString("README_CREATION_SUCCESS"));
+                    .getString("README_CREATION_SUCCESS"));*/
         } catch (IOException e) {
             e.printStackTrace();
-            creationMessage
+           /* creationMessage
                     .setText(ResourceBundle.getBundle("labels", Locale.getDefault())
-                    .getString("README_CREATION_ERROR"));
+                    .getString("README_CREATION_ERROR"));*/
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
+
 
     private void cleanInputFields() {
         usernameParamTextField.setText("");

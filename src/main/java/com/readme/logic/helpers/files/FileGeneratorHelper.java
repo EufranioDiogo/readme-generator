@@ -13,7 +13,7 @@ public class FileGeneratorHelper {
         if (fileType.toString().equals(FileType.NORMAL.toString())) {
 
         } else if (fileType.toString().equals(FileType.README.toString())) {
-            Path newFile = Paths.get(fileType.getOutputTemplatePath(), fileName);
+            Path newFile = Paths.get(fileName);
 
             if (Files.notExists(newFile)) {
                 try {

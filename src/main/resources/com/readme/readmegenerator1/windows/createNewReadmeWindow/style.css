@@ -3,25 +3,27 @@
 }
 .text-field {
     -fx-text-fill: #222;
-    -fx-padding: 5px;
     -fx-font-size: 14px;
     -fx-min-width: 300px;
-    -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
 }
 
 .text-area {
-    -fx-min-width: 600px;
+    -fx-min-width: 90%;
 }
 
 .combo-box {
     -fx-background-color: white;
     -fx-text-fill: #222;
-    -fx-padding: 5px 10px;
     -fx-border-color: #222;
     -fx-end-margin: 40px;
 }
+.text-area, .text-field {
+    -fx-padding: 5px;
+    -fx-border-color: rgba(34, 34, 34, 0.4);
+    -fx-background-color: -fx-text-box-border, -fx-control-inner-background;
+}
 .text-area, .text-field, .combo-box, #goToMainWindowBtn {
-    -fx-border-radius: 5px;
+    -fx-border-radius: 5px
 }
 
 #createNewReadmeButton {
@@ -44,4 +46,10 @@
 
 .button {
 	-fx-cursor: pointer;
+}
+
+.screen-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    
 }

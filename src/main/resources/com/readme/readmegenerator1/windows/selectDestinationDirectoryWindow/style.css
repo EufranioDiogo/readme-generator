@@ -1,0 +1,21 @@
+#createNewReadmeButton {
+    -fx-background-color: #0085BE;
+}
+
+#createNewReadmeButton:hover {
+    -fx-background-color: #00B2FF;
+}
+
+#goToMainWindowBtn {
+    -fx-background-color: #2225;
+    -fx-text-fill: #fff;
+    -fx-padding: 10px 15px;
+}
+
+#goToMainWindowBtn:hover {
+    -fx-background-color: #222;
+}
+
+.button {
+    -fx-cursor: pointer;
+}

@@ -15,6 +15,9 @@ module com.readme.readmegenerator1 {
 
     opens com.readme.readmegenerator1 to javafx.fxml;
     opens com.readme.readmegenerator1.windows.createNewReadmeWindow to javafx.fxml;
+    opens com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow to javafx.fxml;
     exports com.readme.readmegenerator1;
     exports com.readme.readmegenerator1.windows.createNewReadmeWindow;
+    exports com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow;
+
 }

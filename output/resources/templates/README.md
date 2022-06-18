@@ -17,11 +17,11 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]](https://github.com/EufranioDiogo/readme-generator/CONTRIBUTORS.md)
-[![Forks][forks-shield]](https://github.com/EufranioDiogo/readme-generator/fork)
-[![Stargazers][stars-shield]](https://github.com/EufranioDiogo/readme-generator/stargazersi)
-[![Issues][issues-shield]](https://github.com/EufranioDiogo/readme-generator/issues)
-[![MIT License][license-shield]](https://github.com/EufranioDiogo/readme-generator/blob/master/LICENSE)
+[![Contributors][contributors-shield]](https://github.com///CONTRIBUTORS.md)
+[![Forks][forks-shield]](https://github.com///fork)
+[![Stargazers][stars-shield]](https://github.com///stargazersi)
+[![Issues][issues-shield]](https://github.com///issues)
+[![MIT License][license-shield]](https://github.com///blob/master/LICENSE)
 [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/eufranio-diogo-a33145122/)
 
 
@@ -29,18 +29,18 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<h1 align="center">readme-generator</h1>
+<h1 align="center"></h1>
 
   <p align="center">
     <br />
-    <a href="https://github.com/EufranioDiogo/readme-generator"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com//"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://https://github.com/EufranioDiogo/readme-generator/readme-generator">View Demo</a>
+    <a href="https:///">View Demo</a>
     ·
-    <a href="https://github.com/EufranioDiogo/readme-generator/issues">Report Bug</a>
+    <a href="https://github.com///issues">Report Bug</a>
     ·
-    <a href="https://github.com/EufranioDiogo/readme-generator/issues">Request Feature</a>
+    <a href="https://github.com///issues">Request Feature</a>
   </p>
 </div>
 
@@ -77,10 +77,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://https://github.com/EufranioDiogo/readme-generator/readme-generator)
+[![Product Name Screen Shot][product-screenshot]](https:///)
 
-O projecto foi criado para ser uma maneira facíl de criação de readme's, 
-sem muitas dificuldades.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -88,7 +87,7 @@ sem muitas dificuldades.
 
 ### Built With
 
-Java
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -116,7 +115,7 @@ usage_examples_param
 
 tasks_param
 
-See the [open issues](https://github.com/EufranioDiogo/readme-generator/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com///issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -153,7 +152,7 @@ Distributed under the lincense_param. See `LICENSE.md` for more information.
 ## Contact
 
 Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - eufraniodiogo146@gmail.com
-Project Link: [https://github.com/EufranioDiogo/readme-generator](https://github.com/EufranioDiogo/readme-generator)
+Project Link: [https://github.com//](https://github.com//)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -170,16 +169,16 @@ acknowledgments_param
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/EufranioDiogo/readme-generator.svg?style=for-the-badge
-[contributors-url]: https://github.com/EufranioDiogo/readme-generator/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/EufranioDiogo/readme-generator.svg?style=for-the-badge
-[forks-url]: https://github.com/EufranioDiogo/readme-generator/network/members
-[stars-shield]: https://img.shields.io/github/stars/EufranioDiogo/readme-generator.svg?style=for-the-badge
-[stars-url]: https://github.com/EufranioDiogo/readme-generator/stargazers
-[issues-shield]: https://img.shields.io/github/issues/EufranioDiogo/readme-generator.svg?style=for-the-badge
-[issues-url]: https://github.com/EufranioDiogo/readme-generator/issues
-[license-shield]: https://img.shields.io/github/license/EufranioDiogo/readme-generator.svg?style=for-the-badge
-[license-url]: https://github.com/EufranioDiogo/readme-generator/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors//.svg?style=for-the-badge
+[contributors-url]: https://github.com///graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks//.svg?style=for-the-badge
+[forks-url]: https://github.com///network/members
+[stars-shield]: https://img.shields.io/github/stars//.svg?style=for-the-badge
+[stars-url]: https://github.com///stargazers
+[issues-shield]: https://img.shields.io/github/issues//.svg?style=for-the-badge
+[issues-url]: https://github.com///issues
+[license-shield]: https://img.shields.io/github/license//.svg?style=for-the-badge
+[license-url]: https://github.com///blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/eufranio-diogo-a33145122
 [product-screenshot]: IMG/screenshot_param.png
