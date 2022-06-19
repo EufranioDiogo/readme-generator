@@ -46,6 +46,20 @@ public class TemplateGenerator {
         FileCommunicator fileCommunicator = new FileCommunicator(fileReaderHelper, fileGeneratorHelper, replacerHelper);
 
         fileCommunicator.copyFromOriginFileTo(fileGenerated);
+    }
+
+    public static void generateFile(String templateName, FileType fileType, String fileName, Map<String, String> paramsAndValues) throws IOException {
+        FileReaderHelper fileReaderHelper = new FileReaderHelper();
+        fileReaderHelper.loadFile(fileType.getTemplatePath());
+
+        ReplacerHelper replacerHelper = new ReplacerHelper(paramsAndValues);
+        FileGeneratorHelper fileGeneratorHelper = new FileGeneratorHelper();
+        Path fileGenerated = fileGeneratorHelper.generate(fileType, fileName);
+
+
+        FileCommunicator fileCommunicator = new FileCommunicator(fileReaderHelper, fileGeneratorHelper, replacerHelper);
+
+        fileCommunicator.copyFromOriginFileTo(fileGenerated);
 
     }
 }
