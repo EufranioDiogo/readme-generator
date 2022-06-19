@@ -11,6 +11,7 @@
       prefWidth="759.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.readme.readmegenerator1.windows.selectTemplateWindow.SelectTemplateWindowController"
       fx:id="mainWindow"
+      onMouseClicked="#readReadme"
 >
     <children>
         <AnchorPane prefHeight="528.0" prefWidth="759.0" style="-fx-background-color: white;">
