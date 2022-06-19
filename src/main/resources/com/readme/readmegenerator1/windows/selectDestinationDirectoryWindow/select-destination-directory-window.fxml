@@ -12,7 +12,9 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0"
       prefWidth="701.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow.SelectDestinationDirectoryWindowController">
+      fx:controller="com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow.SelectDestinationDirectoryWindowController"
+      fx:id="mainWindow"
+>
     <children>
         <AnchorPane prefHeight="528.0" prefWidth="701.0" style="-fx-background-color: white;">
             <children>
@@ -27,7 +29,7 @@
                         <Font name="Lato Regular" size="14.0"/>
                     </font>
                 </Button>
-                <Button id="goBack" fx:id="goBack" layoutX="20.0" layoutY="121.0"
+                <Button id="goBack" fx:id="goBack" onMouseClicked="#goBack" layoutX="20.0" layoutY="121.0"
                         mnemonicParsing="false" prefHeight="36.0" prefWidth="118.0" styleClass="button" text="Voltar"/>
                 <ImageView id="openDirectoryButton" fitHeight="30.0" fitWidth="34.0" layoutX="334.0" layoutY="70.0"
                            pickOnBounds="true" preserveRatio="true">

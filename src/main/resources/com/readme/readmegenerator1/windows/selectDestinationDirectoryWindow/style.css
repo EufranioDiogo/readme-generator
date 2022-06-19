@@ -6,13 +6,13 @@
     -fx-background-color: #00B2FF;
 }
 
-#goToMainWindowBtn {
+#goBack {
     -fx-background-color: #2225;
     -fx-text-fill: #fff;
     -fx-padding: 10px 15px;
 }
 
-#goToMainWindowBtn:hover {
+#goBack:hover {
     -fx-background-color: #222;
 }
 
