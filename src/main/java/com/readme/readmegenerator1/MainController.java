@@ -1,6 +1,8 @@
 package com.readme.readmegenerator1;
 
 import com.readme.readmegenerator1.windows.createNewReadmeWindow.CreateNewReadmeApplication;
+import com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow.SelectDestinationDirectoryWindowApplication;
+import com.readme.readmegenerator1.windows.selectTemplateWindow.SelectTemplateWindowApplication;
 import com.readme.readmegenerator1.windows.utils.CloseAndOpen;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
@@ -16,7 +18,7 @@ public class MainController {
     @FXML
     protected void openCreateNewReadmeWindow() {
         try {
-            new CreateNewReadmeApplication().start(new Stage());
+            new SelectTemplateWindowApplication().start(new Stage());
             CloseAndOpen.close(mainWindow);
         } catch (Exception e) {
             e.printStackTrace();

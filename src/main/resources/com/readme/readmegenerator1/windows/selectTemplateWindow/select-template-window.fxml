@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.readme.readmegenerator1.windows.selectTemplateWindow.SelectTemplateWindowController"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="524.0"
+      prefWidth="759.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.readme.readmegenerator1.windows.selectTemplateWindow.SelectTemplateWindowController"
+      fx:id="mainWindow"
+>
+    <children>
+        <AnchorPane prefHeight="528.0" prefWidth="759.0" style="-fx-background-color: white;">
+            <children>
+                <AnchorPane layoutX="17.0" layoutY="68.0" prefHeight="265.0" prefWidth="398.0">
+                    <children>
+                        <Pane prefHeight="191.0" prefWidth="344.0"
+                              style="-fx-border-color: #222; -fx-border-radius: 10px;"/>
+                        <AnchorPane prefHeight="191.0" prefWidth="344.0"/>
+                        <Label prefHeight="22.0" prefWidth="344.0" text="othneildrew">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
