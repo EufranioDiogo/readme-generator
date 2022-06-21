@@ -15,8 +15,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.NavigableSet;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
 
 public class SelectTemplateWindowController {
     public VBox mainWindow;
@@ -58,28 +60,37 @@ public class SelectTemplateWindowController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        ReadmeFileVisitor.readmeSources.forEach(path -> {
+        List<AnchorPane> templatePanes = ReadmeFileVisitor.readmeSources.stream().map(path -> {
             AnchorPane templateAnchorPane = new AnchorPane();
             templateAnchorPane.getStyleClass().add("readme-template-container");
-            String background = ThreadLocalRandom.current().nextInt() + "";
-            templateAnchorPane.setStyle("-fx-background-color: #" + background.substring(0, 3) + ";");
             Pane photoReadmeContainer = new Pane();
 
             photoReadmeContainer.getStyleClass().add("readme-template-photo-container");
 
             Label label = new Label();
             label.getStyleClass().add("readme-template-name");
-            label.setText(path.getParent().toString());
+            String[] split = path.getParent().toString().split("/");
+
+
+            label.setText(split[split.length - 1]);
+
+            label.setLayoutY(templateLayoutY + 190 + 5);
 
             Button selectButton = new Button();
             selectButton.setText("Selecionar");
-            selectButton.setOnMouseClicked(event -> SelectTemplateWindowController.selectedReadme = path);
+            selectButton.setOnMouseClicked(event -> {
+                SelectTemplateWindowController.selectedReadme = path;
+            });
+
+            selectButton.setLayoutY(label.getLayoutY() + 40);
 
             Button viewButton = new Button();
 
-            viewButton.setOnMouseClicked(event -> SelectTemplateWindowController.viewReadme = path);
+            viewButton.setOnMouseClicked(event -> {
+                SelectTemplateWindowController.viewReadme = path;
+            });
 
-            selectButton.setText("Ver");
+            viewButton.setText("Ver");
 
             templateAnchorPane.getChildren().addAll(photoReadmeContainer, label, selectButton, viewButton);
 
@@ -93,13 +104,16 @@ public class SelectTemplateWindowController {
                 // templateLayoutY = templateLayoutY + templateAnchorPaneHeight + space between
                 templateLayoutY = templateLayoutY + 287 + 20;
                 templateLayoutX = 14;
+                numberOfTemplatesAdded = 0;
             } else {
                 // templateLayoutX = templateLayoutX + templateAnchorPaneWith + space between
-                templateLayoutX = templateLayoutX + 345 + 20;
+                templateLayoutX = templateLayoutX + 340 + 20;
             }
-            templatesContainer.getChildren().add(templateAnchorPane);
-        });
+            return templateAnchorPane;
+        }).collect(Collectors.toList());
 
-        templatesContainer.setPrefHeight(templateLayoutY + 287 + 20);
+
+        templatesContainer.getChildren().addAll(templatePanes);
+        templatesContainer.setPrefHeight(templateLayoutY + 500);
     }
 }

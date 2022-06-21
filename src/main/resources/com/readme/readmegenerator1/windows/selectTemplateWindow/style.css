@@ -1,25 +1,34 @@
 .readme-templates-container {
+    -fx-focus-color: transparent;
+}
+.readme-template-container:hover {
+    -fx-border-radius: 5px;
+    -fx-border-color: #797979;
 }
 
 .readme-template-container {
     -fx-pref-height: 287px;
-    -fx-pref-width: 345px;
-    -fx-content-display: flex;
-    -fx-alignment: vertical;
+    -fx-pref-width: 344px;
+    -fx-border-radius: 5px;
 }
 
 .readme-template-photo-container {
     -fx-pref-height: 190px;
     -fx-pref-width: 344px;
-    -fx-border-color: #222;
+    -fx-background-color: pink;
+    -fx-border-radius: 5px;
 }
 
 .readme-template-name {
     -fx-font-size: 16px;
+    -fx-pref-width: 344px;
+    -fx-wrap-text: wrap;
+    -fx-ellipsis-string: none;
+    -fx-padding: 0 5px;
 }
 
 .readme-template-select-button {
-
+    -fx-spacing: 0 5px;
 }
 
 .readme-template-button-view {
