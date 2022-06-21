@@ -1,0 +1,26 @@
+.readme-templates-container {
+}
+
+.readme-template-container {
+    -fx-pref-height: 287px;
+    -fx-pref-width: 345px;
+    -fx-content-display: flex;
+    -fx-alignment: vertical;
+}
+
+.readme-template-photo-container {
+    -fx-pref-height: 190px;
+    -fx-pref-width: 344px;
+    -fx-border-color: #222;
+}
+
+.readme-template-name {
+    -fx-font-size: 16px;
+}
+
+.readme-template-select-button {
+
+}
+
+.readme-template-button-view {
+}
