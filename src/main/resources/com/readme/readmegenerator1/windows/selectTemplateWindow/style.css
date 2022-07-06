@@ -12,6 +12,7 @@
     -fx-pref-height: 190px;
     -fx-pref-width: 344px;
     -fx-background-color: #1485d9;
+    -fx-border-style: solid inside;
     -fx-border-radius: 5px;
 }
 
@@ -21,6 +22,7 @@
     -fx-wrap-text: wrap;
     -fx-ellipsis-string: none;
     -fx-padding: 0 5px;
+    -fx-font-family: "Cascadia Code", "Cascadia Code PL", Lato;
 }
 
 .readme-template-select-button {
@@ -33,6 +35,7 @@
     -fx-border-radius: 5px;
     -fx-background-color: #fff;
     -fx-cursor: hand;
+    -fx-font-family: "Cascadia Code", "Cascadia Code PL", Lato;
 }
 
 .select-template-button {

@@ -3,6 +3,7 @@ package com.readme.readmegenerator1.windows.createNewReadmeWindow;
 import com.readme.readmegenerator1.MainApplication;
 import com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow.SelectDestinationDirectoryWindowApplication;
 import com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow.SelectDestinationDirectoryWindowController;
+import com.readme.readmegenerator1.windows.selectTemplateWindow.SelectTemplateWindowApplication;
 import com.readme.readmegenerator1.windows.utils.CloseAndOpen;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,6 +14,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,10 +29,11 @@ public class CreateNewReadmeController {
     public ComboBox licenseParamComboBox;
     public Button createNewReadmeButton;
     public VBox mainWindow;
+    public static Path readmeSelected;
 
     public void goToMainWindow() {
         try {
-            new MainApplication().start(new Stage());
+            new SelectTemplateWindowApplication().start(new Stage());
             CloseAndOpen.close(mainWindow);
         } catch (Exception e) {
             e.printStackTrace();
@@ -80,6 +83,11 @@ public class CreateNewReadmeController {
         domainNameParamTextField.setText("");
         aboutProjectParamTextField.setText("");
         builtWithNameParamTextField.setText("");
+    }
 
+    @FXML
+    public void initialize() {
+        System.out.println("Create components");
+        System.out.println(readmeSelected);
     }
 }

@@ -3,6 +3,9 @@ package com.readme.readmegenerator1.windows.selectTemplateWindow;
 import com.readme.logic.services.readme.ReadmeParam;
 import com.readme.logic.services.readme.ReadmeReader;
 import com.readme.logic.utils.files.ReadmeFileVisitor;
+import com.readme.readmegenerator1.windows.createNewReadmeWindow.CreateNewReadmeApplication;
+import com.readme.readmegenerator1.windows.createNewReadmeWindow.CreateNewReadmeController;
+import com.readme.readmegenerator1.windows.utils.CloseAndOpen;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -10,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -74,28 +78,33 @@ public class SelectTemplateWindowController {
                     Label templateNameLabel = new Label();
                     templateNameLabel.getStyleClass().add("readme-template-name");
                     String[] split = path.getParent().toString().split("/");
+                    String templateName = split[split.length - 1];
 
-
-                    templateNameLabel.setText(split[split.length - 1]);
+                    templateNameLabel.setText(templateName);
 
                     templateNameLabel.setLayoutY(190 + 20);
 
                     Button selectionTemplateButton = new Button();
                     selectionTemplateButton.setText("Selecionar");
-                    selectionTemplateButton.setOnMouseClicked(event -> {
-                        SelectTemplateWindowController.selectedReadme = path;
-                    });
+                    selectionTemplateButton.setOnMouseClicked(event -> SelectTemplateWindowController.selectedReadme = path);
 
                     selectionTemplateButton.setLayoutY(templateNameLabel.getLayoutY() + 40);
 
                     selectionTemplateButton.getStyleClass().addAll("select-template-button", "button");
 
+                    selectionTemplateButton.setOnMouseClicked(event -> {
+                        CreateNewReadmeController.readmeSelected = path;
+                        try {
+                            new CreateNewReadmeApplication().start(new Stage());
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        CloseAndOpen.close(mainWindow);
+                    });
 
                     Button viewButton = new Button();
 
-                    viewButton.setOnMouseClicked(event -> {
-                        SelectTemplateWindowController.viewReadme = path;
-                    });
+                    viewButton.setOnMouseClicked(event -> SelectTemplateWindowController.viewReadme = path);
 
                     viewButton.setText("Ver");
                     viewButton.setLayoutX(5);
