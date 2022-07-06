@@ -55,62 +55,74 @@ public class SelectTemplateWindowController {
     * */
     private void generateTemplateViewElements() {
         Path root = Paths.get("./resources");
+
         try {
             Files.walkFileTree(root, new ReadmeFileVisitor());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        List<AnchorPane> templatePanes = ReadmeFileVisitor.readmeSources.stream().map(path -> {
-            AnchorPane templateAnchorPane = new AnchorPane();
-            templateAnchorPane.getStyleClass().add("readme-template-container");
-            Pane photoReadmeContainer = new Pane();
+        List<AnchorPane> templatePanes = ReadmeFileVisitor
+                .readmeSources
+                .stream()
+                .map(path -> {
+                    AnchorPane templateAnchorPane = new AnchorPane();
+                    templateAnchorPane.getStyleClass().add("readme-template-container");
+                    Pane photoReadmeContainer = new Pane();
 
-            photoReadmeContainer.getStyleClass().add("readme-template-photo-container");
+                    photoReadmeContainer.getStyleClass().add("readme-template-photo-container");
 
-            Label label = new Label();
-            label.getStyleClass().add("readme-template-name");
-            String[] split = path.getParent().toString().split("/");
-
-
-            label.setText(split[split.length - 1]);
-
-            label.setLayoutY(templateLayoutY + 190 + 5);
-
-            Button selectButton = new Button();
-            selectButton.setText("Selecionar");
-            selectButton.setOnMouseClicked(event -> {
-                SelectTemplateWindowController.selectedReadme = path;
-            });
-
-            selectButton.setLayoutY(label.getLayoutY() + 40);
-
-            Button viewButton = new Button();
-
-            viewButton.setOnMouseClicked(event -> {
-                SelectTemplateWindowController.viewReadme = path;
-            });
-
-            viewButton.setText("Ver");
-
-            templateAnchorPane.getChildren().addAll(photoReadmeContainer, label, selectButton, viewButton);
-
-            templateAnchorPane.setLayoutX(templateLayoutX);
-            templateAnchorPane.setLayoutY(templateLayoutY);
+                    Label templateNameLabel = new Label();
+                    templateNameLabel.getStyleClass().add("readme-template-name");
+                    String[] split = path.getParent().toString().split("/");
 
 
-            numberOfTemplatesAdded++;
+                    templateNameLabel.setText(split[split.length - 1]);
 
-            if (numberOfTemplatesAdded >= 2) {
-                // templateLayoutY = templateLayoutY + templateAnchorPaneHeight + space between
-                templateLayoutY = templateLayoutY + 287 + 20;
-                templateLayoutX = 14;
-                numberOfTemplatesAdded = 0;
-            } else {
-                // templateLayoutX = templateLayoutX + templateAnchorPaneWith + space between
-                templateLayoutX = templateLayoutX + 340 + 20;
-            }
-            return templateAnchorPane;
-        }).collect(Collectors.toList());
+                    templateNameLabel.setLayoutY(190 + 20);
+
+                    Button selectionTemplateButton = new Button();
+                    selectionTemplateButton.setText("Selecionar");
+                    selectionTemplateButton.setOnMouseClicked(event -> {
+                        SelectTemplateWindowController.selectedReadme = path;
+                    });
+
+                    selectionTemplateButton.setLayoutY(templateNameLabel.getLayoutY() + 40);
+
+                    selectionTemplateButton.getStyleClass().addAll("select-template-button", "button");
+
+
+                    Button viewButton = new Button();
+
+                    viewButton.setOnMouseClicked(event -> {
+                        SelectTemplateWindowController.viewReadme = path;
+                    });
+
+                    viewButton.setText("Ver");
+                    viewButton.setLayoutX(5);
+                    viewButton.setLayoutY(5);
+
+                    viewButton.getStyleClass().addAll("view-template-button", "button");
+
+                    templateAnchorPane.getChildren().addAll(photoReadmeContainer, templateNameLabel, selectionTemplateButton, viewButton);
+
+
+                    templateAnchorPane.setLayoutX(templateLayoutX);
+                    templateAnchorPane.setLayoutY(templateLayoutY);
+
+
+                    numberOfTemplatesAdded++;
+
+                    if (numberOfTemplatesAdded >= 2) {
+                        // templateLayoutY = templateLayoutY + templateAnchorPaneHeight + space between
+                        templateLayoutY = templateLayoutY + 287 + 20;
+                        templateLayoutX = 14;
+                        numberOfTemplatesAdded = 0;
+                    } else {
+                        // templateLayoutX = templateLayoutX + templateAnchorPaneWith + space between
+                        templateLayoutX = templateLayoutX + 340 + 20;
+                    }
+                    return templateAnchorPane;
+                }).collect(Collectors.toList());
 
 
         templatesContainer.getChildren().addAll(templatePanes);

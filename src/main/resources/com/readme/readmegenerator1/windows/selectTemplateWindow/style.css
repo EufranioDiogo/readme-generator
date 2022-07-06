@@ -1,10 +1,6 @@
 .readme-templates-container {
     -fx-focus-color: transparent;
 }
-.readme-template-container:hover {
-    -fx-border-radius: 5px;
-    -fx-border-color: #797979;
-}
 
 .readme-template-container {
     -fx-pref-height: 287px;
@@ -15,7 +11,7 @@
 .readme-template-photo-container {
     -fx-pref-height: 190px;
     -fx-pref-width: 344px;
-    -fx-background-color: pink;
+    -fx-background-color: #1485d9;
     -fx-border-radius: 5px;
 }
 
@@ -31,5 +27,30 @@
     -fx-spacing: 0 5px;
 }
 
-.readme-template-button-view {
+.button {
+    -fx-padding: 5px 15px;
+    -fx-border-style: none;
+    -fx-border-radius: 5px;
+    -fx-background-color: #fff;
+    -fx-cursor: hand;
+}
+
+.select-template-button {
+    -fx-border-width: 1;
+    -fx-border-style: solid inside;
+    -fx-border-color: #1485d9;
+}
+.select-template-button:hover {
+    -fx-background-color: #1485d9;
+    -fx-text-fill: #fff;
+}
+
+.view-template-button {
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-border-style: solid inside;
+    -fx-border-color: #fff;
+    -fx-text-fill: #fff;
+}
+.view-template-button:hover {
+    -fx-background-color: #0009;
 }
