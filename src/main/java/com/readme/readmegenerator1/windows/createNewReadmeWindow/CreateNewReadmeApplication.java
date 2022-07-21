@@ -1,17 +1,12 @@
 package com.readme.readmegenerator1.windows.createNewReadmeWindow;
 
-import com.readme.readmegenerator1.MainApplication;
 import javafx.application.Application;
-import javafx.collections.FXCollections;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
 
-import java.util.List;
 import java.util.Objects;
 
 public class CreateNewReadmeApplication extends Application {

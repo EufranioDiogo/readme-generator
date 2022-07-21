@@ -2,17 +2,15 @@ package com.readme.logic.services.readme;
 
 import java.io.*;
 import java.nio.file.Path;
-import java.util.NavigableSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.regex.MatchResult;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class ReadmeReader {
-    public static NavigableSet<ReadmeParam> extractReadmeParam(Path file) {
-        NavigableSet<ReadmeParam> readmeParamSet = new TreeSet<>();
+    public static LinkedHashSet<ReadmeParam> extractReadmeParam(Path file) {
+        LinkedHashSet<ReadmeParam> readmeParamSet = new LinkedHashSet<>();
 
         try (
                 FileReader fileReader = new FileReader(file.toFile());

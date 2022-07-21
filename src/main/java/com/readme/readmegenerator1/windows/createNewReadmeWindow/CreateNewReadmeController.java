@@ -1,8 +1,11 @@
 package com.readme.readmegenerator1.windows.createNewReadmeWindow;
 
+import com.readme.logic.TemplateGenerator;
 import com.readme.logic.services.readme.ReadmeParam;
 import com.readme.logic.services.readme.ReadmeReader;
+import com.readme.logic.utils.FileType;
 import com.readme.readmegenerator1.MainApplication;
+import com.readme.readmegenerator1.fields.ReadmeParamNode;
 import com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow.SelectDestinationDirectoryWindowApplication;
 import com.readme.readmegenerator1.windows.selectDestinationDirectoryWindow.SelectDestinationDirectoryWindowController;
 import com.readme.readmegenerator1.windows.selectTemplateWindow.SelectTemplateWindowApplication;
@@ -35,7 +38,7 @@ public class CreateNewReadmeController {
     public VBox mainWindow;
     public static Path readmeSelected;
     public AnchorPane formAnchorPane;
-    public List<Node> listOfNodeParams;
+    public List<ReadmeParamNode> listOfNodeParams;
     public int layoutY = 0;
 
 
@@ -51,52 +54,37 @@ public class CreateNewReadmeController {
     public void createNewReadme() {
         Map<String, String> paramsAndValues = new HashMap<>();
 
-        paramsAndValues.put("user_name_param", usernameParamTextField.getText());
-        paramsAndValues.put("repo_name_param", repoNameParamTextField.getText());
-        paramsAndValues.put("domain_name_param", domainNameParamTextField.getText());
-        paramsAndValues.put("about_project_param", aboutProjectParamTextField.getText());
-        paramsAndValues.put("built_with_param", builtWithNameParamTextField.getText());
-        paramsAndValues.put("license_param", licenseParamComboBox.getSelectionModel().toString());
-        //paramsAndValues.put("getting_started_param", );
-        //paramsAndValues.put("prerequisites_param", );
-        //paramsAndValues.put("usage_examples_param", );
-        //paramsAndValues.put("tasks_param", );
+        listOfNodeParams.forEach(readmeParamNode -> {
+            paramsAndValues.put(readmeParamNode.getReadmeParam().getParamName(), readmeParamNode.getSpecific().getText());
+        });
 
         SelectDestinationDirectoryWindowController.readmeParamValueHashMap = paramsAndValues;
-
-        cleanInputFields();
-
-
+        SelectDestinationDirectoryWindowController.readmeSelectedPath = readmeSelected;
 
         try {
             new SelectDestinationDirectoryWindowApplication().start(new Stage());
             CloseAndOpen.close(mainWindow);
-            /*creationMessage
-                    .setText(ResourceBundle.getBundle("labels", Locale.getDefault())
-                    .getString("README_CREATION_SUCCESS"));*/
-        } catch (IOException e) {
-            e.printStackTrace();
-           /* creationMessage
-                    .setText(ResourceBundle.getBundle("labels", Locale.getDefault())
-                    .getString("README_CREATION_ERROR"));*/
         } catch (Exception e) {
             e.printStackTrace();
         }
+        cleanInputFields();
+
+
+
+
     }
 
 
     private void cleanInputFields() {
-        usernameParamTextField.setText("");
-        repoNameParamTextField.setText("");
-        domainNameParamTextField.setText("");
-        aboutProjectParamTextField.setText("");
-        builtWithNameParamTextField.setText("");
+        listOfNodeParams.forEach(readmeParamNode -> {
+            readmeParamNode.getSpecific().setText("");
+        });
     }
 
     @FXML
     public void initialize() {
         System.out.println("Create components");
-        NavigableSet<ReadmeParam> readmeParams = ReadmeReader.extractReadmeParam(readmeSelected);
+        LinkedHashSet<ReadmeParam> readmeParams = ReadmeReader.extractReadmeParam(readmeSelected);
 
         System.out.println(readmeSelected);
         readmeParams.stream().forEach(System.out::println);
@@ -105,27 +93,27 @@ public class CreateNewReadmeController {
     }
 
 
-    private void buildFormByReadmeParams(NavigableSet<ReadmeParam> readmeParams) {
-        int layoutY = 0;
+    private void buildFormByReadmeParams(LinkedHashSet<ReadmeParam> readmeParams) {
         listOfNodeParams = new ArrayList<>();
 
 
         listOfNodeParams.addAll(
                 readmeParams
                         .stream()
-                        .map(readmeParam -> {
-                            Node node = readmeParam.generateNode();
-
-                            node = putLayoutToNodeOnPane(node, readmeParam.getParamType());
-
-                            return node;
-                        })
+                        .map(readmeParam -> readmeParam.getReadmeParamNode())
                         .collect(Collectors.toList())
         );
 
         formAnchorPane
                 .getChildren()
-                .addAll(listOfNodeParams);
+                .addAll(listOfNodeParams.stream().map(readmeParamNode -> {
+                    Node node = readmeParamNode.generateRepresentativeNode();
+
+                    node = putLayoutToNodeOnPane(node, readmeParamNode.getReadmeParam().getParamType());
+
+                    return node;
+                }).collect(Collectors.toList()));
+
     }
 
     private Node putLayoutToNodeOnPane(Node node, String paramType) {
@@ -144,7 +132,7 @@ public class CreateNewReadmeController {
                 layoutY += 60;
                 break;
             case "text_area_field":
-                layoutY += 220;
+                layoutY += 210;
                 break;
             default:
                 break;

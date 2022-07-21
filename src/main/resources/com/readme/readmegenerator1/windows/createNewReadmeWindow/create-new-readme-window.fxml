@@ -22,7 +22,7 @@
          <children>
             <ScrollPane id="mainScrollPane" fx:id="mainScrollPane" layoutX="1.0" layoutY="121.0" prefHeight="556.0" prefWidth="825.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="78.0">
               <content>
-                <AnchorPane fx:id="formAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="767.0" prefWidth="806.0" style="-fx-background-color: white; -fx-border-color: white;">
+                <AnchorPane fx:id="formAnchorPane" minHeight="0.0" minWidth="0.0" prefWidth="806.0" style="-fx-background-color: white; -fx-border-color: white;">
 
                   </AnchorPane>
               </content>

@@ -34,9 +34,9 @@ public class TemplateGenerator {
         }
     }
 
-    public static void generateFile(FileType fileType, String fileName, Map<String, String> paramsAndValues) throws IOException {
+    public static void generateFile(FileType fileType, String fileName, Map<String, String> paramsAndValues, Path readmeSelectedPath) throws IOException {
         FileReaderHelper fileReaderHelper = new FileReaderHelper();
-        fileReaderHelper.loadFile(fileType.getTemplatePath());
+        fileReaderHelper.loadFile(readmeSelectedPath);
 
         ReplacerHelper replacerHelper = new ReplacerHelper(paramsAndValues);
         FileGeneratorHelper fileGeneratorHelper = new FileGeneratorHelper();

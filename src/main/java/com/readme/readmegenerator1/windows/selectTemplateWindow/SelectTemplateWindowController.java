@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.NavigableSet;
 import java.util.concurrent.ThreadLocalRandom;
@@ -35,7 +36,7 @@ public class SelectTemplateWindowController {
     private int numberOfTemplatesAdded = 0;
 
     public void readReadme(MouseEvent mouseEvent) {
-        NavigableSet<ReadmeParam> readmeParams = ReadmeReader.extractReadmeParam(ReadmeFileVisitor.readmeSources.get(0));
+        LinkedHashSet<ReadmeParam> readmeParams = ReadmeReader.extractReadmeParam(ReadmeFileVisitor.readmeSources.get(0));
     }
 
     @FXML

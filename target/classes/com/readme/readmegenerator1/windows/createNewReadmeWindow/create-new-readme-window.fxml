@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 <VBox fx:id="mainWindow"
       maxHeight="-Infinity"
       maxWidth="-Infinity"
@@ -26,26 +22,8 @@
          <children>
             <ScrollPane id="mainScrollPane" fx:id="mainScrollPane" layoutX="1.0" layoutY="121.0" prefHeight="556.0" prefWidth="825.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="78.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="767.0" prefWidth="806.0" style="-fx-background-color: white; -fx-border-color: white;">
-                     <children>
-                        <Label layoutX="21.0" layoutY="14.0" text="Username*:" />
-                        <TextField fx:id="usernameParamTextField" layoutX="21.0" layoutY="42.0" />
-                        <Label layoutX="21.0" layoutY="82.0" text="Nome Repositorio*:" />
-                        <TextField fx:id="repoNameParamTextField" layoutX="21.0" layoutY="110.0" styleClass="text-field" />
-                        <Label layoutX="20.0" layoutY="163.0" text="URL do Site:" />
-                        <TextField fx:id="domainNameParamTextField" layoutX="20.0" layoutY="191.0" styleClass="text-field" />
-                        <Label layoutX="20.0" layoutY="555.0" text="Tecnologias usadas:" />
-                        <TextField fx:id="builtWithNameParamTextField" layoutX="20.0" layoutY="581.0" styleClass="text-field" />
-                        <Label layoutX="20.0" layoutY="615.0" text="Separar por virgula">
-                           <font>
-                              <Font size="11.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="20.0" layoutY="240.0" text="Sobre o projecto:" />
-                        <TextArea fx:id="aboutProjectParamTextField" layoutX="20.0" layoutY="269.0" prefHeight="261.0" prefWidth="759.0" styleClass="text-area" />
-                        <Label layoutX="21.0" layoutY="649.0" text="Licensa:" />
-                        <ComboBox id="licenseParamComboBox" fx:id="licenseParamComboBox" layoutX="19.0" layoutY="676.0" prefHeight="24.0" prefWidth="174.0" styleClass="combo-box" />
-                     </children>
+                <AnchorPane fx:id="formAnchorPane" minHeight="0.0" minWidth="0.0" prefWidth="806.0" style="-fx-background-color: white; -fx-border-color: white;">
+
                   </AnchorPane>
               </content>
             </ScrollPane>

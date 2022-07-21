@@ -1,16 +1,17 @@
 package com.readme.logic.services.readme;
 
+import com.readme.readmegenerator1.fields.ReadmeParamNode;
 import javafx.scene.Node;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class ReadmeParam implements Comparable<ReadmeParam> {
-    private int line;
-    private final String paramName;
-    private final String paramType;
-    private final String paramLabel;
-    private String paramValue;
+    protected int line;
+    protected final String paramName;
+    protected final String paramType;
+    protected final String paramLabel;
+    protected String paramValue;
 
     public ReadmeParam(String paramDetected) {
         String[] split = paramDetected.split("\\$");
@@ -81,33 +82,7 @@ public class ReadmeParam implements Comparable<ReadmeParam> {
         return paramLabel;
     }
 
-    public String getParamValue() {
-        return paramValue;
-    }
-
-    public void setParamValue(String paramValue) {
-        this.paramValue = paramValue;
-    }
-
-    public Node generateNode() {
-        switch (this.paramType) {
-            case "text_field":
-                TextField textField = new TextField();
-                textField.setPromptText(this.paramLabel);
-                textField.setId(this.paramName);
-                textField.getStyleClass().add("text-field");
-
-                return textField;
-            case "text_area_field":
-                TextArea textArea = new TextArea();
-                textArea.setPromptText(this.paramLabel);
-                textArea.setId(this.paramName);
-                textArea.getStyleClass().add("text-area");
-
-                return textArea;
-            default:
-                System.err.println(this);
-                return null;
-        }
+    public ReadmeParamNode getReadmeParamNode() {
+        return new ReadmeParamNode(this);
     }
 }

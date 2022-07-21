@@ -13,11 +13,13 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
 
 public class SelectDestinationDirectoryWindowController {
     public static Map<String, String> readmeParamValueHashMap;
+    public static Path readmeSelectedPath;
     @FXML
     public Button goBack;
     @FXML
@@ -35,7 +37,8 @@ public class SelectDestinationDirectoryWindowController {
                                 Paths.get(directoryLocationTextField.getText(),
                                         "README.md"
                                 ).toString(),
-                                SelectDestinationDirectoryWindowController.readmeParamValueHashMap
+                                SelectDestinationDirectoryWindowController.readmeParamValueHashMap,
+                                readmeSelectedPath
                         );
             }
         } catch (IOException e) {

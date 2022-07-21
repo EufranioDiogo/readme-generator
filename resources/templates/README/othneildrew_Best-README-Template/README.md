@@ -44,23 +44,7 @@
   </p>s
 </div>
 
-$about_next_param_0$text_field$label content$
-$about_next_param$text_area_field$label content$
 
-$about_next_param_1$text_field$label content$
-$about_next_param_2$text_area_field$label content$
-
-$about_next_param_3$text_field$label content$
-$about_next_param_4$text_area_field$label content$
-
-$about_next_param_5$text_field$label content$
-$about_next_param_6$text_area_field$label content$
-
-$about_next_param_7$text_field$label content$
-$about_next_param_8$text_area_field$label content$
-
-$about_next_param_9$text_field$label content$
-$about_next_param_10$text_area_field$label content$
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -72,16 +56,6 @@ $about_next_param_10$text_area_field$label content$
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -107,31 +81,11 @@ built_with_param
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-getting_started_param
 
 ### Prerequisites
 
 prerequisites_param
 
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-usage_examples_param
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Tasks
-
-tasks_param
-
-See the [open issues](https://github.com/user_name_param/repo_name_param/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -173,16 +127,6 @@ Project Link: [https://github.com/user_name_param/repo_name_param](https://githu
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-acknowledgments_param
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/user_name_param/repo_name_param.svg?style=for-the-badge
@@ -198,3 +142,15 @@ acknowledgments_param
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/eufranio-diogo-a33145122
 [product-screenshot]: IMG/screenshot_param.png
+
+
+
+$user_name_param$text_field$Nome do usuário$
+$repo_name_param$text_field$Nome do repositório$
+$about_project_param$text_area_field$Sobre o projecto$
+$built_with_param$text_area_field$Construido com ...$
+$lincense_param$text_field$Licensa$
+
+
+
+

@@ -22,6 +22,7 @@ import java.nio.file.Paths;
 import java.util.Objects;
 
 public class SelectDestinationDirectoryWindowApplication extends Application {
+
     @Override
     public void start(Stage stage) throws Exception {
         Application.setUserAgentStylesheet(null);
