@@ -34,6 +34,6 @@ public class CreateNewReadmeApplication extends Application {
 
         mainScrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
 
-        liceComboBox.setItems(FXCollections.observableArrayList("Eufránio Diogo", "Creuma Diogo"));
+        //liceComboBox.setItems(FXCollections.observableArrayList("Eufránio Diogo", "Creuma Diogo"));
     }
 }

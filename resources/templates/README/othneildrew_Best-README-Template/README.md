@@ -44,8 +44,23 @@
   </p>s
 </div>
 
-$input$text_fiel$label content$
+$about_next_param_0$text_field$label content$
+$about_next_param$text_area_field$label content$
 
+$about_next_param_1$text_field$label content$
+$about_next_param_2$text_area_field$label content$
+
+$about_next_param_3$text_field$label content$
+$about_next_param_4$text_area_field$label content$
+
+$about_next_param_5$text_field$label content$
+$about_next_param_6$text_area_field$label content$
+
+$about_next_param_7$text_field$label content$
+$about_next_param_8$text_area_field$label content$
+
+$about_next_param_9$text_field$label content$
+$about_next_param_10$text_area_field$label content$
 
 <!-- TABLE OF CONTENTS -->
 <details>
